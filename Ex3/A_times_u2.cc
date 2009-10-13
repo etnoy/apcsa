@@ -14,7 +14,6 @@ void reset_vector(double vector[], int dim);
 void equality_test(int N, double v[], double v_test[]);
 
 void A_dense_mult_ordinary(int N, double A[], double u[], double v[]);
-void InPlaceTranspose(int dim, double* A);
 void A_dense_mult_chunk   (int N, double A[], double u[], double v[]);
 void A_dense_mult_BLAS    (int N, double A[], double u[], double v[]);
 
@@ -66,7 +65,7 @@ int main(int argc, char** argv){
     }
 
 
-#pragma omp parallel shared(p)
+    #pragma omp parallel shared(p)
     {
         p = omp_get_num_threads();
     }
@@ -222,15 +221,14 @@ void A_dense_mult_ordinary(int N, double A[], double u[], double v[]){
 	
 	double temp_sum = 0.0;
 	
-	#pragma omp parallel for private(v, temp_sum)
+	#pragma omp parallel for private(temp_sum)
 	
-		for(int i = 0; i<N; i++)
-		{
-			for(int j = 0; j<N; j++)
-				temp_sum += A[ i*N + j ]*u[j];
-			v[i] = temp_sum;
-		}	
-	
+	for(int i = 0; i<N; i++)
+	{
+		for(int j = 0; j<N; j++)
+			temp_sum += A[ i*N + j ]*u[j];
+		v[i] = temp_sum;
+	}	
 
 	return;
 }
@@ -242,15 +240,14 @@ void A_dense_mult_chunk(int N, double A[], double u[], double v[]){
 	// Here we edit to get chunks of size half the equal, equal and double the equal:
 	int chunk = N/omp_get_num_threads(); 
 
-	#pragma omp parallel for private(v, temp_sum) schedule(static, chunk)
+	#pragma omp parallel for private(temp_sum) schedule(static, chunk)
 	
-		for(int i = 0; i<N; i++)
-		{
-			for(int j = 0; j<N; j++)
-				temp_sum += A[ i*N + j ]*u[j];
-			v[i] = temp_sum;
-		}	
-	
+	for(int i = 0; i<N; i++)
+	{
+		for(int j = 0; j<N; j++)
+			temp_sum += A[ i*N + j ]*u[j];
+		v[i] = temp_sum;
+	}	
 
 	return;
 }
@@ -260,10 +257,10 @@ void A_dense_mult_chunk(int N, double A[], double u[], double v[]){
 void A_dense_mult_BLAS(int N, double A[], double u[], double v[]){
 
  	const int I = 1;	
-	#pragma omp parallel for private(v)
+	#pragma omp parallel for 
 		for(int i = 0; i<N; i++)
 		{
-			v[i] = ddot_(&N,&A[i*N],&I,&u,&I);
+			v[i] = ddot_(&N,&A[i*N],&I,u,&I);
 		}	
 	return;
 }
@@ -276,13 +273,13 @@ void A_triangular_mult_ordinary(int N, double A[], double u[], double v[]){
 	
 	double temp_sum = 0.0;
 	
-	#pragma omp parallel for private(v, temp_sum)
-		for(int i = 0; i<N; i++)
-		{
-			for(int j = i; j<N; j++)
-				temp_sum += A[ i*N + j ]*u[j];
-			v[i] = temp_sum;
-		}	
+	#pragma omp parallel for private(temp_sum)
+	for(int i = 0; i<N; i++)
+	{
+		for(int j = i; j<N; j++)
+			temp_sum += A[ i*N + j ]*u[j];
+		v[i] = temp_sum;
+	}	
 	return;
 
 
@@ -293,17 +290,16 @@ void A_triangular_mult_optimized(int N, double A[], double u[], double v[]){
 
 	double temp_sum = 0.0;
 	// Here we edit to get chunks of size half the equal, equal and double the equal:
-	int chunk = static_cast< int >(ceil(N*(N+1)/2/omp_get_num_threads())); 
+	int chunk = ( int ) (ceil(N*(N+1)/2/omp_get_num_threads())); 
 
-	#pragma omp parallel for private(v, temp_sum) schedule(dynamic, chunk)
-		for(int i = 0; i<N; i++)
-		{
-			for(int j = 0; j<N; j++)
-				temp_sum += A[ i*N + j ]*u[j];
-			v[i] = temp_sum;
-		}	
+	#pragma omp parallel for private(temp_sum) schedule(dynamic, chunk)
+	for(int i = 0; i<N; i++)
+	{
+		for(int j = 0; j<N; j++)
+			temp_sum += A[ i*N + j ]*u[j];
+		v[i] = temp_sum;
+	}	
 	return;
-
 
 }
 
@@ -314,22 +310,3 @@ void A_triangular_mult_self_opt (int N, double A[], double u[], double v[]){
 
 }
 
-void InPlaceTranspose(int dim, double* A)
-{	
-	double tempPointer;
-
-	for (int i=1; i<dim;i++)
-	{
-		for(int j=0; j<i; j++)
-		{
-			// Set temp to pointer of the (i,j) element
-			// and then move pointer of (j,i) to pointer (i,j), then
-			// set (j,i) to tempPointer
-
-			tempPointer=A[i*dim+j];
-			A[i*dim+j]=A[j*dim+i];
-			A[j*dim+i]=tempPointer;
-
-		}
-	}
-}

@@ -90,7 +90,7 @@ int main(int argc, char** argv){
 
     cout << "   > ordinary  : ";
     time = walltime(&time_start);
-    A_dense_mult_ordinary(N, A, u, v1);        // to implement DONE!
+    A_dense_mult_ordinary(N, A, u, v1);        
     time = walltime(&time);
     equality_test(N, v1, v_dense);
     cout << time << " sec " << endl;

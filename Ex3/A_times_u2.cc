@@ -219,12 +219,11 @@ void equality_test(int N, double v[], double v_test[]){
 // a)
 void A_dense_mult_ordinary(int N, double A[], double u[], double v[]){
 	
-	double temp_sum = 0.0;
-	
-	#pragma omp parallel for private(temp_sum)
+	#pragma omp parallel for
 	
 	for(int i = 0; i<N; i++)
 	{
+		double temp_sum = 0.0;
 		for(int j = 0; j<N; j++)
 			temp_sum += A[ i*N + j ]*u[j];
 		v[i] = temp_sum;
@@ -236,14 +235,14 @@ void A_dense_mult_ordinary(int N, double A[], double u[], double v[]){
 
 void A_dense_mult_chunk(int N, double A[], double u[], double v[]){
 	
-	double temp_sum = 0.0;
 	// Here we edit to get chunks of size half the equal, equal and double the equal:
 	int chunk = N/omp_get_num_threads(); 
 
-	#pragma omp parallel for private(temp_sum) schedule(static, chunk)
+	#pragma omp parallel for schedule(static, chunk)
 	
 	for(int i = 0; i<N; i++)
 	{
+		double temp_sum = 0.0;
 		for(int j = 0; j<N; j++)
 			temp_sum += A[ i*N + j ]*u[j];
 		v[i] = temp_sum;

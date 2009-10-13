@@ -1,6 +1,7 @@
 #include <omp.h>
 #include <iostream>
 #include <assert.h>
+#include <cmath>
 
 #include "crs.h"
 #include "walltime.h"
@@ -258,11 +259,11 @@ void A_dense_mult_chunk(int N, double A[], double u[], double v[]){
 
 void A_dense_mult_BLAS(int N, double A[], double u[], double v[]){
 
-	
+ 	const int I = 1;	
 	#pragma omp parallel for private(v)
 		for(int i = 0; i<N; i++)
 		{
-			v[i] = ddot_(N,A[i*N],1,u,1);
+			v[i] = ddot_(&N,&A[i*N],&I,&u,&I);
 		}	
 	return;
 }

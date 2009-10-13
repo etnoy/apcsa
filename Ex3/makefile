@@ -1,5 +1,5 @@
-OBJ    = A_times_u2.cpp
-CC     = g++
+OBJ    = A_times_u2.cc
+CC     = icc
 CFLAGS = -openmp -O0 -o
 CLIBS  = -lmkl -lm -lgomp
 

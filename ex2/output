@@ -1,0 +1,198 @@
+Sender: LSF System <lsfadmin@a6346>
+Subject: Job 663585: <./vectorAdd> Done
+
+Job <./vectorAdd> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6346>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex2> was used as the working directory.
+Started at Mon Oct 12 11:41:13 2009
+Results reported at Mon Oct 12 11:41:13 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./vectorAdd
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.28 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Serial execution time =0.016027sec
+1
+Parallel execution time =0.048399sec
+Sender: LSF System <lsfadmin@a6197>
+Subject: Job 663582: <./vectorAdd> Done
+
+Job <./vectorAdd> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6197>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex2> was used as the working directory.
+Started at Mon Oct 12 11:41:13 2009
+Results reported at Mon Oct 12 11:41:14 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./vectorAdd
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.30 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Serial execution time =0.015353sec
+1
+Parallel execution time =0.071325sec
+Sender: LSF System <lsfadmin@a6274>
+Subject: Job 663587: <./vectorAdd> Done
+
+Job <./vectorAdd> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6274>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex2> was used as the working directory.
+Started at Mon Oct 12 11:42:15 2009
+Results reported at Mon Oct 12 11:42:15 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./vectorAdd
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.16 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Serial execution time =0.016108sec
+1
+Parallel execution time =0.013264sec
+Sender: LSF System <lsfadmin@a6191>
+Subject: Job 663614: <./vectorAdd> Done
+
+Job <./vectorAdd> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6191>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex2> was used as the working directory.
+Started at Mon Oct 12 11:43:20 2009
+Results reported at Mon Oct 12 11:43:20 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./vectorAdd
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.16 sec.
+    Max Memory :         2 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Serial execution time =0.015092sec
+1
+Parallel execution time =0.012517sec
+Sender: LSF System <lsfadmin@a6316>
+Subject: Job 663833: <./vectorAdd> Done
+
+Job <./vectorAdd> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <16*a6316>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex2> was used as the working directory.
+Started at Mon Oct 12 11:44:23 2009
+Results reported at Mon Oct 12 11:44:28 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./vectorAdd
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.35 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Serial execution time =0.016815sec
+1
+Parallel execution time =0.015488sec
+Sender: LSF System <lsfadmin@a6217>
+Subject: Job 663834: <./vectorAdd> Done
+
+Job <./vectorAdd> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6217>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex2> was used as the working directory.
+Started at Mon Oct 12 11:44:23 2009
+Results reported at Mon Oct 12 11:44:28 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./vectorAdd
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.18 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Serial execution time =0.016497sec
+1
+Parallel execution time =0.014264sec

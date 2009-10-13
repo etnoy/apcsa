@@ -263,7 +263,7 @@ void A_dense_mult_BLAS(int N, double A[], double u[], double v[]){
 	#pragma omp parallel for private(v)
 		for(int i = 0; i<N; i++)
 		{
-			v[i] = ddot_(&N,&A[i*N],&I,u,&I);
+			v[i] = ddot_(&N,&A[i*N],&I,&u,&I);
 		}	
 	return;
 }

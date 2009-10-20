@@ -1,0 +1,35 @@
+Sender: LSF System <lsfadmin@a6313>
+Subject: Job 913672: <ompirun ./a.out> Done
+
+Job <ompirun ./a.out> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6313>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex5/q1> was used as the working directory.
+Started at Tue Oct 20 13:47:20 2009
+Results reported at Tue Oct 20 13:47:25 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+ompirun ./a.out
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.41 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Hello world from process 0 of 4
+Process 0 of 4
+Process 2 of 4
+Process 1 of 4
+Process 3 of 4

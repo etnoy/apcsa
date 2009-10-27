@@ -7,6 +7,8 @@
 int main (int argc, char** argv) {
 	int rank, size,i,t;
 
+	printf("hej\n");
+
 	MPI_Status stat;
 
 	MPI_Init(&argc, &argv);
@@ -36,9 +38,9 @@ int main (int argc, char** argv) {
 		if(rank ==0)
 		{
 			timestamp=MPI_Wtime()-timestamp;
-			timestamp=MPI_Wtick()*timestamp;
-			bandwidth=buf*LOOPS/timestamp/2;
-			printf("Size: %d: %f Bps\n", buf, bandwidth/8);
+			//timestamp=MPI_Wtick()*timestamp;
+			bandwidth=buf*LOOPS/timestamp*8/2;
+			printf("%f Bps\n", bandwidth);
 		}
 	}
 

@@ -30,14 +30,13 @@ int main (int argc, char** argv) {
 		sender=rank-1;
 	}
 
-	ranks[rank]=rank;	
+	ranks[0]=rank;	
 	for(int i=0;i<size;i++) {
-		sendbuf[1]=ranks[rank+i];	
+		sendbuf[1]=ranks[i];	
 		MPI_Sendrecv(&sendbuf, 1, MPI_INT, receiver,1, &recvbuf, 1, MPI_INT, sender, 1,MPI_COMM_WORLD, &stat);
-		ranks[rank+i+1 % size]=recvbuf[1];
+		ranks[i]=recvbuf[1];
 		printf("%d: %d\n", rank, ranks[rank+i]);
 	}
-
 
 	MPI_Finalize();
 

@@ -36,6 +36,7 @@ int main (int argc, char** argv) {
 		MPI_Sendrecv(&sendbuf, 1, MPI_INT, receiver,1, &recvbuf, 1, MPI_INT, sender, 1,MPI_COMM_WORLD, &stat);
 		ranks[i]=recvbuf[1];
 		printf("%d: %d\n", rank, ranks[rank+i]);
+		/*muahaha*/
 	}
 
 	MPI_Finalize();

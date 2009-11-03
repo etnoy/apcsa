@@ -4,15 +4,16 @@
 #include <math.h>
 
 int main (int argc, char** argv) {
-	int rank, size,i,t;
+	int rank, size,i,t,sum;
 	MPI_Status stat;
+	MPI_Request sendreq, recvreq;
 
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-	double sendbuf[1];
-	double recvbuf[1];
+	int sendbuf[1];
+	int recvbuf[1];
 	int receiver,sender;
 	int ranks[size];
 
@@ -29,17 +30,18 @@ int main (int argc, char** argv) {
 	} else {
 		sender=rank-1;
 	}
+	sum=0;
 
 	ranks[0]=rank;	
 	for(int i=0;i<size;i++) {
-		sendbuf[1]=ranks[i];	
-		MPI_Sendrecv(&sendbuf, 1, MPI_INT, receiver,1, &recvbuf, 1, MPI_INT, sender, 1,MPI_COMM_WORLD, &stat);
-		ranks[i]=recvbuf[1];
-		printf("%d: %d\n", rank, ranks[rank+i]);
+		sendbuf[0]=ranks[i];	
+		MPI_Isend(&sendbuf, 1, MPI_INT, receiver,1, MPI_COMM_WORLD, &sendreq);
+		MPI_Irecv(&recvbuf, 1, MPI_INT, sender, 1,MPI_COMM_WORLD, &recvreq);
+		MPI_Wait(&sendreq, &stat);
+		MPI_Wait(&recvreq, &stat);
+		ranks[(i+1)%size]=recvbuf[0];
+		sum+=recvbuf[0];
 	}
-
-	MPI_Finalize();
-
-	return 0;
+	printf("Sum: %d\n", sum);
 
 }

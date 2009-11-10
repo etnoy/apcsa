@@ -161,7 +161,8 @@ int main(int argc, char** argv){
 	A_sparse->completeAssembly();
 	cout << "   > serial    :                     ";
 	time = walltime(&time_start);
-	A_sparse->mult_serial(u_sparse, v_sparse);  // to implement in "crs.h"
+       	//printf("SwiftJustice\n");
+	//A_sparse->mult_serial(u_sparse, v_sparse);
 	time = walltime(&time);
 	cout << time << " sec " << endl;
 

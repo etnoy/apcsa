@@ -23,7 +23,7 @@ int main()
   int     num_threads;
   double time, time_start=0.0;
   int counter;
-  int N;
+  int N,size;
   N=omp_get_thread_num();
   size=omp_get_num_threads();
 
@@ -47,6 +47,25 @@ int main()
   time = walltime(&time);
   printf("Serial execution time = %f sec\n",time);
 
+  time = walltime(&time_start);
+  #pragma omp parallel
+  {
+	#pragma omp for nowait
+	for( j=1; j<=N_I; j++) {                               // iterate over the columns
+	      v_i = V_I_MIN+(j-1)*v_i_step;
+	      for( i=1; i<=N_R; i++ ) {                          //iterate over the rows
+		  v_r = V_R_MIN+(i-1)*v_r_step;
+		  field[i-1 +(j-1)*N_R] = mandelbrot(v_r, v_i);  // column major
+	      }
+	    }
+
+	  for( j=0; j<N_I; j++) 
+	     for( i=1; i<N_R-1; i++ )
+		dither[i+j*N_R] = 0.5*field[i+j*N_R] + 0.25*(field[(i-1)+j*N_R] + field[(i+1)+j*N_R]); 
+
+  }
+  time = walltime(&time);
+  printf("Serial execution time = %f sec\n",time);
 
 
   // Use can use the following piece of code to verity the fractal pattern for small image sizes 

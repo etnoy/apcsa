@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	// Generate the Hilbert matrix
     for(int i=0; i< numMyElements; i++)
     {
-       for (int j=0; j<N; j++)
+       for (int j=i; j<N; j++)
 		 values[j] = 1.0/(myGlobalElements[i]+j+1);
        A.InsertGlobalValues(myGlobalElements[i],    // Global row number
  							N, 						// Number or entries in each row

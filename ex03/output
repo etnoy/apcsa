@@ -1,0 +1,477 @@
+Sender: LSF System <lsfadmin@a6179>
+Subject: Job 699939: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <4*a6179>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 14:57:32 2009
+Results reported at Tue Oct 13 14:57:35 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      2.15 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.152515 sec )
+
+   > ordinary  : v = v_test          0.154246 sec 
+   > stat chunk: v = v_test          0.152618 sec 
+   > BLAS      : v = v_test          0.049302 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.077906 sec )
+
+   > ordinary  : v = v_test          0.079165 sec 
+   > dyn. chunk: v = v_test          0.079852 sec 
+   > self opt. : v = v_test          0.076563 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     5.2367e-17 sec 
+   > parallel  : v = v_test          1.96241e-17 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     1e-06 sec 
+Sender: LSF System <lsfadmin@a6290>
+Subject: Job 699942: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <4*a6290>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 14:57:32 2009
+Results reported at Tue Oct 13 14:57:36 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      2.08 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.147114 sec )
+
+   > ordinary  : v = v_test          0.148881 sec 
+   > stat chunk: v = v_test          0.14885 sec 
+   > BLAS      : v = v_test          0.038159 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.074696 sec )
+
+   > ordinary  : v = v_test          0.075317 sec 
+   > dyn. chunk: v = v_test          0.075209 sec 
+   > self opt. : v = v_test          0.074336 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     4.91686e-17 sec 
+   > parallel  : v = v_test          1e-06 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     1e-06 sec 
+Sender: LSF System <lsfadmin@a6169>
+Subject: Job 699969: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <4*a6169>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 14:58:44 2009
+Results reported at Tue Oct 13 14:58:47 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      2.12 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.153428 sec )
+
+   > ordinary  : v = v_test          0.156629 sec 
+   > stat chunk: v = v_test          0.168507 sec 
+   > BLAS      : v = v_test          0.04989 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.074194 sec )
+
+   > ordinary  : v = v_test          0.075394 sec 
+   > dyn. chunk: v = v_test          0.077029 sec 
+   > self opt. : v = v_test          0.077083 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     -2.14672e-17 sec 
+   > parallel  : v = v_test          -5.42101e-17 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     -5.18791e-17 sec 
+Sender: LSF System <lsfadmin@a6169>
+Subject: Job 699970: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <4*a6169>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 14:58:44 2009
+Results reported at Tue Oct 13 14:58:51 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      2.18 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.17002 sec )
+
+   > ordinary  : v = v_test          0.155166 sec 
+   > stat chunk: v = v_test          0.155023 sec 
+   > BLAS      : v = v_test          0.245007 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.076849 sec )
+
+   > ordinary  : v = v_test          0.413273 sec 
+   > dyn. chunk: v = v_test          0.077259 sec 
+   > self opt. : v = v_test          0.077063 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     1e-06 sec 
+   > parallel  : v = v_test          -6.88468e-17 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     1e-06 sec 
+Sender: LSF System <lsfadmin@a6179>
+Subject: Job 700032: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <4*a6179>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 15:01:07 2009
+Results reported at Tue Oct 13 15:01:10 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      2.15 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.149538 sec )
+
+   > ordinary  : v = v_test          0.15283 sec 
+   > stat chunk: v = v_test          0.152503 sec 
+   > BLAS      : v = v_test          0.050673 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.075868 sec )
+
+   > ordinary  : v = v_test          0.077347 sec 
+   > dyn. chunk: v = v_test          0.077084 sec 
+   > self opt. : v = v_test          0.076198 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     -5.52943e-17 sec 
+   > parallel  : v = v_test          -5.74627e-18 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     1e-06 sec 
+Sender: LSF System <lsfadmin@a6427>
+Subject: Job 700037: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <16*a6427>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 15:14:51 2009
+Results reported at Tue Oct 13 15:14:53 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      7.07 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.147397 sec )
+
+   > ordinary  : v = v_test          0.024555 sec 
+   > stat chunk: v = v_test          0.155329 sec 
+   > BLAS      : v = v_test          0.027814 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.075073 sec )
+
+   > ordinary  : v = v_test          0.012229 sec 
+   > dyn. chunk: v = v_test          0.075712 sec 
+   > self opt. : v = v_test          0.012129 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     1e-06 sec 
+   > parallel  : v = v_test          9.59519e-18 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     -2.15214e-17 sec 
+Sender: LSF System <lsfadmin@a6496>
+Subject: Job 699971: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <16*a6496>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 15:14:51 2009
+Results reported at Tue Oct 13 15:14:59 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      2.19 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.170827 sec )
+
+   > ordinary  : v = v_test          0.155628 sec 
+   > stat chunk: v = v_test          0.155136 sec 
+   > BLAS      : v = v_test          0.055867 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.07823 sec )
+
+   > ordinary  : v = v_test          0.077968 sec 
+   > dyn. chunk: v = v_test          0.0781 sec 
+   > self opt. : v = v_test          0.078437 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     -1.32815e-17 sec 
+   > parallel  : v = v_test          -4.60244e-17 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     1.85941e-17 sec 
+Sender: LSF System <lsfadmin@a6496>
+Subject: Job 700044: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <16*a6496>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 15:16:00 2009
+Results reported at Tue Oct 13 15:16:02 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      7.13 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.148835 sec )
+
+   > ordinary  : v = v_test          0.024544 sec 
+   > stat chunk: v = v_test          0.156337 sec 
+   > BLAS      : v = v_test          0.02793 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.077693 sec )
+
+   > ordinary  : v = v_test          0.025901 sec 
+   > dyn. chunk: v = v_test          0.076174 sec 
+   > self opt. : v = v_test          0.012228 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     4.19044e-17 sec 
+   > parallel  : v = v_test          3.79471e-17 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     1e-06 sec 
+Sender: LSF System <lsfadmin@a6427>
+Subject: Job 700039: <./A_times_u> Done
+
+Job <./A_times_u> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <16*a6427>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/Ex3> was used as the working directory.
+Started at Tue Oct 13 15:16:00 2009
+Results reported at Tue Oct 13 15:16:02 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./A_times_u
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      7.07 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+
+Number of threads: 1
+
+a) dense A           (Serial computation of A_dense*u = v_dense: 0.145532 sec )
+
+   > ordinary  : v = v_test          0.024494 sec 
+   > stat chunk: v = v_test          0.155771 sec 
+   > BLAS      : v = v_test          0.02671 sec 
+
+b) triangular A      (Serial computation of A_dense*u = v_triag: 0.075711 sec )
+
+   > ordinary  : v = v_test          0.015527 sec 
+   > dyn. chunk: v = v_test          0.075841 sec 
+   > self opt. : v = v_test          0.012135 sec 
+
+c) sparse A          (0.02% non-zero entries in the matrix)
+
+   > serial    :                     2.59666e-17 sec 
+   > parallel  : v = v_test          2.19551e-17 sec 
+
+d) sparse transposed A
+
+   > parallel  :                     7.58942e-18 sec 

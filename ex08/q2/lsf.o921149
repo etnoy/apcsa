@@ -1,0 +1,72 @@
+Sender: LSF System <lsfadmin@a6260>
+Subject: Job 921149: <ompirun ./a.out> Exited
+
+Job <ompirun ./a.out> was submitted from host <brutus2> by user <forsj>.
+Job was executed on host(s) <4*a6260>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex8/q2> was used as the working directory.
+Started at Tue Nov 24 14:43:03 2009
+Results reported at Tue Nov 24 14:43:08 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+ompirun ./a.out
+------------------------------------------------------------
+
+TERM_EXTERNAL_SIGNAL: job killed by a signal external to LSF.
+Exited with signal termination: Segmentation fault.
+
+Resource usage summary:
+
+    CPU time   :      0.36 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+[a6260:27350] *** Process received signal ***
+[a6260:27350] Signal: Segmentation fault (11)
+[a6260:27350] Signal code: Address not mapped (1)
+[a6260:27350] Failing at address: 0x98
+[a6260:27352] *** Process received signal ***
+[a6260:27352] Signal: Segmentation fault (11)
+[a6260:27352] Signal code: Address not mapped (1)
+[a6260:27352] Failing at address: 0x98
+[a6260:27351] *** Process received signal ***
+[a6260:27351] Signal: Segmentation fault (11)
+[a6260:27351] Signal code: Address not mapped (1)
+[a6260:27351] Failing at address: 0x98
+[a6260:27353] *** Process received signal ***
+[a6260:27353] Signal: Segmentation fault (11)
+[a6260:27353] Signal code: Address not mapped (1)
+[a6260:27353] Failing at address: 0x98
+[a6260:27350] [ 0] /lib64/libpthread.so.0 [0x2b36290e44c0]
+[a6260:27350] [ 1] /cluster/apps/openmpi/1.2.9/x86_64/intel_10.1.018/lib/libmpi.so.0(PMPI_Cart_create+0x6a) [0x2b3627b5bd06]
+[a6260:27350] [ 2] ./a.out(main+0xd6) [0x40205e]
+[a6260:27350] [ 3] /lib64/libc.so.6(__libc_start_main+0xf4) [0x2b362930e974]
+[a6260:27350] [ 4] ./a.out [0x401ed9]
+[a6260:27350] *** End of error message ***
+[a6260:27352] [ 0] /lib64/libpthread.so.0 [0x2b1ee972d4c0]
+[a6260:27352] [ 1] /cluster/apps/openmpi/1.2.9/x86_64/intel_10.1.018/lib/libmpi.so.0(PMPI_Cart_create+0x6a) [0x2b1ee81a4d06]
+[a6260:27352] [ 2] ./a.out(main+0xd6) [0x40205e]
+[a6260:27352] [ 3] /lib64/libc.so.6(__libc_start_main+0xf4) [0x2b1ee9957974]
+[a6260:27352] [ 4] ./a.out [0x401ed9]
+[a6260:27352] *** End of error message ***
+[a6260:27351] [ 0] /lib64/libpthread.so.0 [0x2b5b04af04c0]
+[a6260:27351] [ 1] /cluster/apps/openmpi/1.2.9/x86_64/intel_10.1.018/lib/libmpi.so.0(PMPI_Cart_create+0x6a) [0x2b5b03567d06]
+[a6260:27351] [ 2] ./a.out(main+0xd6) [0x40205e]
+[a6260:27351] [ 3] /lib64/libc.so.6(__libc_start_main+0xf4) [0x2b5b04d1a974]
+[a6260:27351] [ 4] ./a.out [0x401ed9]
+[a6260:27351] *** End of error message ***
+[a6260:27353] [ 0] /lib64/libpthread.so.0 [0x2b79070844c0]
+[a6260:27353] [ 1] /cluster/apps/openmpi/1.2.9/x86_64/intel_10.1.018/lib/libmpi.so.0(PMPI_Cart_create+0x6a) [0x2b7905afbd06]
+[a6260:27353] [ 2] ./a.out(main+0xd6) [0x40205e]
+[a6260:27353] [ 3] /lib64/libc.so.6(__libc_start_main+0xf4) [0x2b79072ae974]
+[a6260:27353] [ 4] ./a.out [0x401ed9]
+[a6260:27353] *** End of error message ***
+/cluster/home/stud/forsj/.lsbatch/1259070145.921149: line 8: 27318 Segmentation fault      ompirun ./a.out

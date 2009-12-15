@@ -1,0 +1,32 @@
+Sender: LSF System <lsfadmin@a2202>
+Subject: Job 85349: <./a.out> Exited
+
+Job <./a.out> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <a2202>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex5/q2> was used as the working directory.
+Started at Tue Oct 27 13:58:06 2009
+Results reported at Tue Oct 27 14:58:54 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./a.out
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time   :   3645.57 sec.
+    Max Memory :         8 MB
+    Max Swap   :       216 MB
+
+    Max Processes  :         3
+    Max Threads    :         3
+
+The output (if any) follows:
+
+User defined signal 2

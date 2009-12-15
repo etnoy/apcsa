@@ -1,0 +1,31 @@
+Sender: LSF System <lsfadmin@a6257>
+Subject: Job 85233: <./a.out> Done
+
+Job <./a.out> was submitted from host <brutus3> by user <forsj>.
+Job was executed on host(s) <4*a6257>, in queue <pub.1h>, as user <forsj>.
+</cluster/home/stud/forsj> was used as the home directory.
+</cluster/home/stud/forsj/courses/apcsa/ex5/q1> was used as the working directory.
+Started at Tue Oct 27 13:44:39 2009
+Results reported at Tue Oct 27 13:44:46 2009
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./a.out
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :      0.16 sec.
+    Max Memory :         3 MB
+    Max Swap   :        17 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+Hello world from process 0 of 1
